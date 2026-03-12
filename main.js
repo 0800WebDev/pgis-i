@@ -20,6 +20,7 @@ function replacePage() {
                     </head>
                     <body>
                         <iframe src="https://pgis.onrender.com/index.html"></iframe>
+                        <script>
                     const iframe = document.querySelector("iframe");
 
 iframe.addEventListener("load", () => {
@@ -29,6 +30,7 @@ iframe.addEventListener("load", () => {
         }
     });
 });
+</script>
                     </body>
                     `;
 
