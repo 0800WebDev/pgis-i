@@ -21,15 +21,12 @@ function replacePage() {
                     <body>  
                         <iframe src="https://pgis.onrender.com/index.html"></iframe>  
                         <script>  
-                    const iframe = document.querySelector("iframe");  
-  
-iframe.addEventListener("load", () => {  
-    iframe.contentWindow.addEventListener("keydown", function(e) {  
-        if (e.ctrlKey && e.key.toLowerCase() === "q") {  
-            window.location.href = "https://www.google.com";  
-        }  
-    });  
-});  
+                    // Put this in the parent page, outside the dynamic HTML
+window.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === "q") {
+        window.location.href = "https://www.google.com";
+    }
+});
 </script>  
                     </body>  
                     `;  
