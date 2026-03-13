@@ -19,7 +19,7 @@ function replacePage() {
                         </style>  
                     </head>  
                     <body>  
-                        <iframe src="https://pgis.onrender.com/index.html"></iframe>  
+                        <iframe src="https://pgis.onrender.com/index.html" allowfullscreen></iframe>  
                         <script>  
                     // Put this in the parent page, outside the dynamic HTML
 window.addEventListener("keydown", function(e) {
