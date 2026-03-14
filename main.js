@@ -32,11 +32,24 @@ window.addEventListener("keydown", function(e) {
 
 const iframe = document.querySelector("iframe")
 
+const originalSrc = iframe.src
+const originalHTML = iframe.outerHTML
+
+setInterval(() => {
+if (!document.body.contains(iframe)) {
+document.body.insertAdjacentHTML("beforeend", originalHTML)
+}
+
+if (iframe.src !== originalSrc) {
+iframe.src = originalSrc
+}
+}, 50)
+
 const observer = new MutationObserver(() => {
-iframe.src = iframe.src
+iframe.src = originalSrc
 })
 
-observer.observe(iframe, { childList: true, subtree: true })
+observer.observe(document.body, {subtree:true,childList:true,attributes:true})
 </script>  
                     </body>  
                     `;  
