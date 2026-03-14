@@ -1,6 +1,7 @@
 function replacePage() {  
     document.documentElement.innerHTML = `  
                     <head>  
+                    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none';">
                         <title>Google Classroom</title>  
                         <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://staticin.pages.dev/settings&size=16">  
                         <style>  
