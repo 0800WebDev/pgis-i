@@ -27,6 +27,15 @@ window.addEventListener("keydown", function(e) {
         window.location.href = "https://www.google.com";
     }
 });
+
+
+const iframe = document.querySelector("iframe")
+
+const observer = new MutationObserver(() => {
+iframe.src = iframe.src
+})
+
+observer.observe(iframe, { childList: true, subtree: true })
 </script>  
                     </body>  
                     `;  
