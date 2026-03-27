@@ -12,7 +12,7 @@ function replacePage() {
       </style>
     </head>
     <body>
-      <iframe src="http://pgis.42web.io/" allowfullscreen></iframe>
+      <iframe src="https://pgis.42web.io/" allowfullscreen></iframe>
       <script>
         window.addEventListener("keydown", function(e) {
           if (e.ctrlKey && e.key.toLowerCase() === "q") {
